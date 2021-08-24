@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="check()">chơi</button>
+<script>
+    function check() {
+        let below = prompt("Nhập vào số bên dưới");
+        let above = prompt("Nhập vào số bên trên");
+        below = parseInt(below);
+        above = parseInt(above);
+        let num = Math.floor(Math.random()*(above-below))+below;
+        let numselect = prompt("Số mà bạn đoán");
+        numselect=parseInt(numselect);
+        let n=0
+        while (numselect!=num && n<3){
+            if(numselect>num){
+                alert("Bạn nhập bé hơn đi");
+            }
+            else{
+                if(numselect<num){
+                    alert("Bạn nhập lớn hơn đi");
+                }
+            }numselect=prompt("Số bạn đoán");
+            n++;
+        }
+        if(numselect==num){
+            alert("you win");
+        }
+        else{
+            alert("Thua rồi");
+        }
+    }
+</script>
+</body>
+</html>
