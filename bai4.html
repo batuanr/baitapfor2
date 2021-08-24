@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num1=0;
+    let num2=1;
+    let total=0;
+    for(i=0;i<20;i++){
+        total=num1+num2;
+        if(total%5==0){
+            break;
+        }
+        num1=num2;
+        num2=total;
+    }alert(total)
+</script>
+</body>
+</html>
